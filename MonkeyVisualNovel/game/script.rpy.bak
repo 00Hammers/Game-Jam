@@ -1,0 +1,21 @@
+﻿label start:
+    $score = 0
+
+    jump day01
+
+label end_day01:
+    narrator "il primo giorno è proprio giunto al termine eh bro?"
+    jump day02
+
+label end_day02:
+    narrator "il secondo giorno è proprio giunto al termine eh bro?"
+    jump day03
+
+label end_day03:
+    narrator "il terzo giorno è proprio giunto al termine eh bro?"
+    jump day04
+
+label end_day04:
+    narrator "il qaurto giorno è proprio giunto al termine eh bro?"
+
+    return

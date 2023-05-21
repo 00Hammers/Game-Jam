@@ -1,0 +1,15 @@
+label day02:
+    scene bg corridoio 1
+    
+    narrator "2° giorno fratm"
+    
+    show connor at left
+
+    menu:
+        "Sì":
+            $ score += 1
+        
+        "No":
+            $ score = score
+
+    jump end_day02
