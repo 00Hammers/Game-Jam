@@ -1,4 +1,4 @@
 *.rpyc
-cache/shaders.txt
-saves/persistent
+~/shaders.txt
+~/persistent
 log.txt
