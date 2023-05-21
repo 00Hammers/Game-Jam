@@ -10,12 +10,24 @@ define e = Character("Eileen")
 
 label start:
 
-    jump day01
+    # Show a background. This uses a placeholder by default, but you can
+    # add a file (named either "bg room.png" or "bg room.jpg") to the
+    # images directory to show it.
 
-    jump day02
+    scene bg room
 
-    jump day03
+    # This shows a character sprite. A placeholder is used, but you can
+    # replace it by adding a file named "eileen happy.png" to the images
+    # directory.
 
-    jump day04
-    
+    show eileen happy
+
+    # These display lines of dialogue.
+
+    e "You've created a new Ren'Py game."
+
+    e "Once you add a story, pictures, and music, you can release it to the world!"
+
+    # This ends the game.
+
     return
