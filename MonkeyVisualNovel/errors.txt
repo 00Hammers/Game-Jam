@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/definizioni.rpy", line 4: is not terminated with a newline. (Check strings and parenthesis.)
-    define connor = Character("Mr. MonkeDawg", color=
+File "game/definizioni.rpy", line 37: expected '=' not found.
+    define bg corridoio 1 = "images/bg/bg corridoio 1.jpeg"
+              ^
 
 Ren'Py Version: Ren'Py 8.1.0.23051307
-Sun May 21 14:09:35 2023
+Sun May 21 15:58:00 2023
