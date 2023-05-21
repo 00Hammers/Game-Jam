@@ -1,79 +1,36 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object ('images/bg/bg corridoio 1.jpeg') at 0x000000000511b8e0>:
-  File "game/script.rpy", line 26, in script
-    connor "You've created a new Ren'Py game."
-  File "renpy/common/000window.rpy", line 114, in _window_auto_callback
-    _window_show(auto=True)
-  File "renpy/common/000window.rpy", line 69, in _window_show
-    renpy.with_statement(trans)
-OSError: Couldn't find file 'images/bg/bg corridoio 1.jpeg'.
+While running game code:
+  File "game/gui.rpy", line 15, in script
+    define config.check_conflicting_properties = True
+  File "game/gui.rpy", line 15, in script
+    define config.check_conflicting_properties = True
+  File "renpy/common/000namespaces.rpy", line 11, in set
+    setattr(self.nso, name, value)
+Exception: config.check_conflicting_properties is not a known configuration variable.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 26, in script
-    connor "You've created a new Ren'Py game."
-  File "C:\Users\wawa\Desktop\renpy-8.1.0-sdk\renpy\ast.py", line 898, in execute
-    statement_name(stmt_name)
-  File "C:\Users\wawa\Desktop\renpy-8.1.0-sdk\renpy\ast.py", line 47, in statement_name
-    i(name)
-  File "renpy/common/000window.rpy", line 114, in _window_auto_callback
-    _window_show(auto=True)
-  File "renpy/common/000window.rpy", line 69, in _window_show
-    renpy.with_statement(trans)
-  File "C:\Users\wawa\Desktop\renpy-8.1.0-sdk\renpy\exports.py", line 1757, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "C:\Users\wawa\Desktop\renpy-8.1.0-sdk\renpy\display\core.py", line 2895, in do_with
-    return self.interact(trans_pause=True,
-  File "C:\Users\wawa\Desktop\renpy-8.1.0-sdk\renpy\display\core.py", line 3499, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\wawa\Desktop\renpy-8.1.0-sdk\renpy\display\core.py", line 4089, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "C:\Users\wawa\Desktop\renpy-8.1.0-sdk\renpy\display\core.py", line 2699, in draw_screen
-    surftree = renpy.display.render.render_screen(
-  File "render.pyx", line 492, in renpy.display.render.render_screen
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\wawa\Desktop\renpy-8.1.0-sdk\renpy\display\layout.py", line 886, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\wawa\Desktop\renpy-8.1.0-sdk\renpy\display\transition.py", line 378, in render
-    bottom = render(self.old_widget, width, height, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\wawa\Desktop\renpy-8.1.0-sdk\renpy\display\layout.py", line 886, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\wawa\Desktop\renpy-8.1.0-sdk\renpy\display\layout.py", line 886, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\wawa\Desktop\renpy-8.1.0-sdk\renpy\display\transform.py", line 909, in render
-    return RenderTransform(self).render(width, height, st, at)
-  File "accelerator.pyx", line 979, in renpy.display.accelerator.RenderTransform.render
-  File "accelerator.pyx", line 404, in renpy.display.accelerator.RenderTransform.render_child
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\wawa\Desktop\renpy-8.1.0-sdk\renpy\display\image.py", line 513, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "C:\Users\wawa\Desktop\renpy-8.1.0-sdk\renpy\display\image.py", line 316, in wrap_render
-    rend = render(child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\wawa\Desktop\renpy-8.1.0-sdk\renpy\display\im.py", line 676, in render
-    return cache.get(self, render=True)
-  File "C:\Users\wawa\Desktop\renpy-8.1.0-sdk\renpy\display\im.py", line 330, in get
-    surf = image.load()
-  File "C:\Users\wawa\Desktop\renpy-8.1.0-sdk\renpy\display\im.py", line 803, in load
-    raise e
-  File "C:\Users\wawa\Desktop\renpy-8.1.0-sdk\renpy\display\im.py", line 757, in load
-    filelike = renpy.loader.load(self.filename, directory="images")
-  File "C:\Users\wawa\Desktop\renpy-8.1.0-sdk\renpy\loader.py", line 833, in load
-    raise IOError("Couldn't find file '%s'." % name)
-OSError: Couldn't find file 'images/bg/bg corridoio 1.jpeg'.
+  File "renpy/bootstrap.py", line 331, in bootstrap
+    renpy.main.main()
+  File "renpy/main.py", line 560, in main
+    renpy.game.context().run(node)
+  File "game/gui.rpy", line 15, in script
+    define config.check_conflicting_properties = True
+  File "game/gui.rpy", line 15, in script
+    define config.check_conflicting_properties = True
+  File "renpy/ast.py", line 2213, in execute
+    self.set()
+  File "renpy/ast.py", line 2228, in set
+    ns.set(self.varname, value)
+  File "renpy/common/000namespaces.rpy", line 11, in set
+    setattr(self.nso, name, value)
+  File "renpy/defaultstore.py", line 106, in __setattr__
+    raise Exception('config.%s is not a known configuration variable.' % (name))
+Exception: config.check_conflicting_properties is not a known configuration variable.
 
-Windows-10-10.0.22621 AMD64
-Ren'Py 8.1.0.23051307
+Windows-10-10.0.19041
+Ren'Py 7.4.11.2266
 MonkeyVisualNovel 1.0
-Sun May 21 16:00:29 2023
+Sun May 21 17:04:11 2023
