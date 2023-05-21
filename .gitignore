@@ -1,8 +1,9 @@
 *rpyc
-*rpyb
+#*rpyb
+/cache/*
 *bak
 *save
-*json
-*shaders.txt
-*persistent
-*log.txt
+#*json
+#*shaders.txt
+#*persistent
+#*txt
