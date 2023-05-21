@@ -1,1 +1,4 @@
 *.rpyc
+shaders.txt
+persistent
+log.txt
