@@ -1,2 +1,2 @@
-﻿label day02:
+﻿label day 02:
     
