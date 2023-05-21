@@ -1,4 +1,4 @@
 *.rpyc
-~/shaders.txt
-~/persistent
+game/cache/shaders.txt
+game/saves/persistent
 log.txt
